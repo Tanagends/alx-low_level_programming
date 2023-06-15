@@ -1,7 +1,7 @@
 #include <stdio.h>
 /** 
- * Main - starting point.
- * A program that prints text.
+ *Main - starting point.
+ *Return: always 0 (Success).
  */
 int main(void)
 {
