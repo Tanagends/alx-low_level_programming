@@ -1,6 +1,7 @@
 #include <stdio.h>
-/** Main - starting point.
- *  A program that prints text
+/** 
+ * Main - starting point.
+ * A program that prints text.
  */
 int main(void)
 {
