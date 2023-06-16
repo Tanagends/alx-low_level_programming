@@ -5,9 +5,9 @@
  */
 int main(void)
 {
-	for (char = a; char <= z; char++)
-		if (char == q || char == e)
+	for (char ch = a; ch <= z; ch++)
+		if (ch == q || ch == e)
 			continue;
-		putchar(char);
+		putchar(ch);
 	return (0);
 }
