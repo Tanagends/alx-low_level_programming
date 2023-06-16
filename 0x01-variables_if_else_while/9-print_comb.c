@@ -5,8 +5,8 @@
  */
 int main(void)
 {
-	int n=0;
-	
+	int n = 0;
+
 	while (n <= 9)
 	{
 		putchar(n + '0');
@@ -15,6 +15,5 @@ int main(void)
 		putchar(' ');
 		n++;
 	}
-	putchar(9 + '0');
 	return (0);
 }
