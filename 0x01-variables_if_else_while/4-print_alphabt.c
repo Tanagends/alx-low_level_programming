@@ -5,8 +5,8 @@
  */
 int main(void)
 {
-	for (char ch = a; ch <= z; ch++)
-		if (ch == q || ch == e)
+	for (char ch = 'a'; ch <= 'z'; ch++)
+		if (ch == 'q' || ch == 'e')
 			continue;
 		putchar(ch);
 	return (0);
