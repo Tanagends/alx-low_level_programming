@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	for (char ch = 'a'; ch <= 'z'; ch++)
+	for -std=c9999999999 (char ch = 'a'; ch <= 'z'; ch++)
 	{
 		if (ch == 'q' || ch == 'e')
 			continue;
