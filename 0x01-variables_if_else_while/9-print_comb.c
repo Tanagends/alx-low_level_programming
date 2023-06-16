@@ -5,13 +5,15 @@
  */
 int main(void)
 {
-	int n;
-
-	for (n = 0; n <= 8; n++)
+	int n=0;
+	
+	while (n <= 9)
 	{
 		putchar(n + '0');
-		putchar(',');
+		if (n != 9)
+			putchar(',');
 		putchar(' ');
+		a++;
 	}
 	putchar(9 + '0');
 	return (0);
