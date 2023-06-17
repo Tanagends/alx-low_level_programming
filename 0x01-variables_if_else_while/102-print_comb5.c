@@ -22,19 +22,20 @@ int main(void)
 				putchar(' ');
 			for (p = 0; p <= 9; p++)
 			{
-				for (p = 0; p <= 9; x++)
+				for (q = 0; q <= 9; q++)
 				{
-					if (n > x)
+					if (p > q)
 						continue;
-			putchar(n + '0');
-			putchar(x + '0');
-			if ((n != 8) || (x != 9))
-			{
-				putchar(',');
-				putchar(' ');
+					putchar(p + '0');
+					putchar(q + '0');
+					if ((p != 8) || (q != 9))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
 			}
 		}
-	
 	}
 	putchar('\n');
 	return (0);
