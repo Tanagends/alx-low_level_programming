@@ -16,8 +16,12 @@ int main(void)
 		{
 			for (p = 0; p <= 9; p++)
 			{
-				for (q = 1; q <= 9; q++)
+				for (q = 0; q <= 9; q++)
 				{
+					if ((n == 0) || (x == 0) || (p == 0) || (q == 0))
+						continue;
+					if ((n == 9) || (x == 9) || (p == 9) || (q == 9))
+						continue;
 					putchar(n + '0');
 					putchar(x + '0');
 					putchar(' ');
