@@ -18,16 +18,16 @@ int main(void)
 			{
 				for (q = 0; q <= 9; q++)
 				{
-					if ((n == 0) || (x == 0) || (p == 0) || (q == 0))
+					if ((n == 0) && (x == 0) && (p == 0) && (q == 0))
 						continue;
-					if ((n == 9) || (x == 9) || (p == 9) || (q == 9))
+					if ((n == 9) && (x == 9) && (p == 9) && (q == 9))
 						continue;
 					putchar(n + '0');
 					putchar(x + '0');
 					putchar(' ');
 					putchar(p + '0');
 					putchar(q + '0');
-					if ((p != 9) || (q != 9) || (n != 9) || (x != 8))
+					if ((p != 9) && (q != 9) && (n != 9) && (x != 8))
 					{
 						putchar(',');
 						putchar(' ');
