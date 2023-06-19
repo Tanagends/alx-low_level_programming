@@ -22,6 +22,8 @@ int main(void)
 						continue;
 					if ((n == 9) && (x == 9) && (p == 9) && (q == 9))
 						continue;
+					if (n > p)
+						continue;
 					putchar(n + '0');
 					putchar(x + '0');
 					putchar(' ');
