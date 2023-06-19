@@ -22,7 +22,7 @@ int main(void)
 						continue;
 					if ((n == 9) && (x == 9) && (p == 9) && (q == 9))
 						continue;
-					if ((n == p) && (x > q))
+					if (((n == p) && (x >= q))
 						continue;
 					if (n > p)
 						continue;
