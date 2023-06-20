@@ -1,10 +1,9 @@
-#include "main.h"
-/**
- * main - prints the alphabet.
- * Return: 0 (success)
- */
-int main(void)
+#include <stdio.h>
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	char s;
+
+	for (s='a'; s<='z'; s++)
+		putchar(s);
+	putchar('\n');
 }
