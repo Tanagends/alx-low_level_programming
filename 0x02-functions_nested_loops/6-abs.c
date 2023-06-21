@@ -4,10 +4,8 @@
  * @int: - integer to be computed into its absolute value
  * Return: int absolute value.
  */
-int _abs(int)
+int _abs(int c)
 {
-	int c;
-
 	if (c < 0)
 		return (-c);
 	return (c);
