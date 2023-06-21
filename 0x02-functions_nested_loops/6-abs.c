@@ -4,7 +4,7 @@
  * @int: integer to be computed into its absolute value
  * Return: int absolute value.
  */
-int _abs(int)
+int _abs(int c)
 {
 	int c;
 	int result;
