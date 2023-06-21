@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
  * _abs - finds the absolute value of an int.
- * @int: integer to be computed into its absolute value
+ * @c: The integer to compute the absolute value of.
+ *
  * Return: int absolute value.
  */
 int _abs(int c)
