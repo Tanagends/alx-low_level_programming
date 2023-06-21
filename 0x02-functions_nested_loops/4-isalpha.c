@@ -1,5 +1,6 @@
 /**
  * _isalpha - checks is c is a character.
+ * @c: the character to be checked.
  * Return: 1(Success)
  */
 int _isalpha(int c)
