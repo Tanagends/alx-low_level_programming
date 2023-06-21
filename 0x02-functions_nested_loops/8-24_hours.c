@@ -20,11 +20,11 @@ void jack_bauer(void)
 				{
 					if ((n == 2) && (x > 3))
 						continue;
-					putchar(n);
-					putchar(x);
+					putchar(n + '0');
+					putchar(x + '0');
 					putchar(':');
-					putchar(p);
-					putchar(q);
+					putchar(p + '0');
+					putchar(q + '0');
 					putchar('\n');
 				}
 			}
