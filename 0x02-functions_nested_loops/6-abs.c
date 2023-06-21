@@ -6,6 +6,8 @@
  */
 int _abs(int c)
 {
+	int result;
+
 	if (c < 0)
 		result = -c;
 	else
