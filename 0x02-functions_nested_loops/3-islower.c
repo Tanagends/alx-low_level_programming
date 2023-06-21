@@ -1,3 +1,6 @@
+/**
+ * _islower - checks for lowercase.
+ */
 int _islower(int c)
 {
 	if ((c >= 'a') && (c <= 'z'))
