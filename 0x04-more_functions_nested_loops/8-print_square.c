@@ -1,23 +1,23 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *print_square - print a square.
- *@size: one dimension of square.
- */
+* print_square - prints a square, followed by a new line
+* @size: size of the square
+* Return: void
+*/
 void print_square(int size)
 {
-	int i;
-	int k;
+	int b;
+	int c;
 
-	if (size <= 0)
-		putchar('\n');
-	for (i = 0; i < size; i++)
+	for (b = 0; b < size; b++)
 	{
-		for (k = 0; k < size; k++)
+		for (c = 0; c < size; c++)
 		{
-		putchar('#');
-		if (k != size - 1)
-			putchar('\n');
+			putchar(35);
 		}
+		if (b != size - 1)
+			putchar('\n');
 	}
+	putchar('\n');
 }
