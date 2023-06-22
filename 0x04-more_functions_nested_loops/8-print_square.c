@@ -23,7 +23,7 @@ void print_square(int size)
 		putchar('#');
 		putchar('\n');
 	}
-	for (i = 0; i < n; i++)
+	for (i = 0; i < 28; i++)
 		putchar('#');
 	putchar('\n');
 }
