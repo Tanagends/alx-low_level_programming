@@ -1,8 +1,8 @@
-
+#include "main.h"
 #include <stdio.h>
 /**
- * more_numbers - multiplies 0-14 by 10.
- */
+* more_numbers - multiplies 0-14 by 10.
+*/
 void more_numbers(void)
 {
 	int a;
