@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * print_numbers - prints 0-9
+ * print_most_numbers - prints 0-9
  */
 void print_most_numbers(void)
 {
