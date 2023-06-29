@@ -6,12 +6,13 @@
  * @s: string to be converted.
  * Return: encoded string.
  */
-char *leet(char *s)
+char *leet(char *str)
 {
 	int i, j;
 	char *leetStr = str;
+	int k = strlen(str);
 
-	for (i = 0; i < strlen(str); i++)
+	for (i = 0; i < k; i++)
 	{
 		for (j = 0; j < 5; j++) 
 		{
