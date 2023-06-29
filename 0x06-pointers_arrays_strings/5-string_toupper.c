@@ -1,22 +1,18 @@
-
 /**
- * _strcat - concatenates two strings.
- * @dest: pointer to the first string.
- * @src: pointer to the second string.
- * Return: dest(the resulting string).
+ * string_toupper - converts string to upper case.
+ * Return: string in upper.
  */
-char *_strcat(char *dest, char *src)
+char *string_toupper(char *s)
 {
-	char *init = dest;
+	int i = 0;
 
-	while (*init != '\0')
-		*init++;
-	while (*src != '\0')
+	while (s[i] != '\0')
 	{
-		*init = *src;
-		init++;
-		src++;
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] = s[i] - 32;
+		}
+		i++;
 	}
-	*init = '\0';
-	return (dest);
+	return (s);
 }
