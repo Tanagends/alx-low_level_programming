@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 /**
  * leet - encodes a string  
  * @s: string to be converted.
