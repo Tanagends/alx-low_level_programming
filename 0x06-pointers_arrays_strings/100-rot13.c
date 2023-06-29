@@ -5,8 +5,9 @@
 char *rot13(char *str) {
     int i, j;
     char *rot13Str = str;
+    int k = strlen(str);
 
-    for (i = 0; i < strlen(str); i++) {
+    for (i = 0; i < k; i++) {
         if (isalpha(str[i])) {
             for (j = 0; j < 13; j++) {
                 if ((str[i] == 'z' && j < 13) || (str[i] == 'Z' && j < 13)) {
