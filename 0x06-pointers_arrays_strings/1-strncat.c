@@ -4,12 +4,13 @@
  * @src: pointer to the second string.
  * Return: dest(the resulting string).
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	char *init = dest;
+	int n
 
 	while (*init != '\0')
-		init++;
+		*init++;
 	while (*src != '\0')
 	{
 		*init = *src;
