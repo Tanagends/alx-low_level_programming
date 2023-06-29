@@ -1,5 +1,6 @@
 /**
  * string_toupper - converts string to upper case.
+ * @s: string to be converted.
  * Return: string in upper.
  */
 char *string_toupper(char *s)
