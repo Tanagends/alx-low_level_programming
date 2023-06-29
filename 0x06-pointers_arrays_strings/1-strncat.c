@@ -19,7 +19,7 @@ char *_strncat(char *dest, char *src, int n)
 		init++;
 		src++;
 	}
-	if (strlen(src) < n)
+	if (*src == '\0')
 		*init = '\0';
 	return (dest);
 }
