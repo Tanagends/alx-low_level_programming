@@ -2,8 +2,8 @@
 #include <string.h>
 #include <ctype.h>
 /**
- * leet - encodes a string 
- * @s: string to be converted.
+ * leet - encodes a string
+ * @str: string to be converted.
  * Return: encoded string.
  */
 char *leet(char *str)
