@@ -2,7 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 /**
- * leet - encodes a string  
+ * leet - encodes a string 
  * @s: string to be converted.
  * Return: encoded string.
  */
@@ -14,14 +14,14 @@ char *leet(char *str)
 
 	for (i = 0; i < k; i++)
 	{
-		for (j = 0; j < 5; j++) 
+		for (j = 0; j < 5; j++)
 		{
-			if (toupper(str[i]) == "AEOTL"[j]) 
+			if (toupper(str[i]) == "AEOTL"[j])
 			{
 				leetStr[i] = "43071"[j];
 				break;
 			}
-		}	
+		}
 	}
-	return leetStr;
+	return (leetStr);
 }
