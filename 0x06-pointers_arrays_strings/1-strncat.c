@@ -1,3 +1,4 @@
+#include <string.h>
 /**
  * _strncat - concatenates two strings.
  * @dest: pointer to the first string.
@@ -18,7 +19,7 @@ char *_strncat(char *dest, char *src, int n)
 		init++;
 		src++;
 	}
-	if (*src == '\0')
+	if (strlen(src) < n)
 		*init = '\0';
 	return (dest);
 }
