@@ -1,23 +1,38 @@
-/**
- * cap_string - converts string to upper case.
- * @s: string to be converted.
- * Return: string in upper.
- */
-char *cap_string(char *s)
-{
-	int i = 0;
-	int k;
-	char p[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+#include "main.h"
 
-	while (s[i] != '\0')
+/**
+ * cap_string - Capitalizes all words of a string.
+ * @str: The string to be capitalized.
+ *
+ * Return: A pointer to the changed string.
+ */
+char *cap_string(char *str)
+{
+	int index = 0;
+
+	while (str[index])
 	{
-		for (k = 0; k < 13; k++)
-		{
-			if (s[i - 1] == p[k])
-				if (s[i] >= 'a' && s[i] <= 'z')
-					s[i] = s[i] - 32;
-		}
-		i++;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0)
+			str[index] -= 32;
+
+		index++;
 	}
-	return (s);
+
+	return (str);
 }
