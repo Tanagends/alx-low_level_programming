@@ -1,27 +1,28 @@
-#include <string.h>
 /**
- * _strspn - gets the length of a a string prefix..
+ * _strpbrk - checks the string for for the presence of a char in accept string.
  *@s: whole string.
- *@accept: the sring prefix.
- *Return: the string prefix length.
+ *@accept: the sring with the chars.
+ *Return: the pointer to the matching byte in s.
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i;
-	unsigned int l = strlen(accept);
-	unsigned int k, j;
+unsigned int i;
+unsigned int j;
+unsigned int k;
 
-	j = 1;
-	for (i = 0; i < l; i++)
+for (i = 0; s[i] != '\0'; i++)
+{
+	j = 0;
+	for (k = 0; accept[k] != '\0'; k++)
 	{
-		for (k = 0; k < l; k++)
+		if (s[i] == accept[k])
 		{
-			if (s[i] == accept[k])
-			{
-				/*continue to the outer loop*/
-				continue;
-			}
+			j = 1;
+			break;
 		}
 	}
-	return (j);
+	if (j)
+		break;
+}
+return (s + i);
 }
