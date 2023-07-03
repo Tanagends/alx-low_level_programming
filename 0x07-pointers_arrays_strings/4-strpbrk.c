@@ -1,20 +1,23 @@
+#include "main.h"
 /**
- * _strpbrk - checks the string for for the presence of a char in accept string.
- *@s: whole string.
- *@accept: the sring with the chars.
- *Return: the pointer to the matching byte in s.
+ * *_strpbrk - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
  */
 char *_strpbrk(char *s, char *accept)
 {
-unsigned int k;
+		int k;
 
-for (s = 0; *s; s++)
-{
-	for (k = 0; accept[k]; k++)
-	{
-		if (*s == accept[k])
+		while (*s)
+		{
+			for (k = 0; accept[k]; k++)
+			{
+			if (*s == accept[k])
 			return (s);
-	}
-}
-return ('\0');
+			}
+		s++;
+		}
+
+	return ('\0');
 }
