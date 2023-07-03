@@ -24,5 +24,8 @@ for (i = 0; s[i] != '\0'; i++)
 	if (j)
 		break;
 }
-return (s + i);
+if (j)
+	return (&s[i]);
+else
+	return (0);
 }
