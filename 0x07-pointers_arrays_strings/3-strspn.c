@@ -1,4 +1,3 @@
-#include <string.h>
 /**
  * _strspn - gets the length of a a string prefix..
  *@s: whole string.
@@ -7,22 +6,23 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i;
-	unsigned int l = strlen(accept);
-	unsigned int k, j;
+unsigned int i;
+unsigned int l;
+unsigned int k, j;
 
-	j = 1;
-	for (i = 0; i < l; i++)
+j = 1;
+outer_loop:
+for (i = 0; s[i] != '\0'; i++)
+{
+	for (k = 0; accept[k] != '\0'; k++)
 	{
-		for (k = 0; k < l; k++)
+		if (s[i] == accept[k])
 		{
-			if (s[i] == accept[k])
-			{
-				j++;
-				/*continue to the outer loop*/
-				continue;
-			}
+			j++;
+			/*continue to the outer loop*/
+			continue outer_loop;
 		}
 	}
-	return (j);
+}
+return (j);
 }
