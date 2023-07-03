@@ -25,7 +25,7 @@ for (i = 0; s[i] != '\0'; i++)
 		break;
 }
 if (j)
-	return (&s[i]);
+	return ((char *)&s[i - 1]);
 else
 	return (0);
 }
