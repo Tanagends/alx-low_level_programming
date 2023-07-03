@@ -10,18 +10,19 @@ unsigned int i;
 unsigned int j;
 unsigned int k;
 
-j = 0;
 for (i = 0; s[i] != '\0'; i++)
 {
+	j = 0;
 	for (k = 0; accept[k] != '\0'; k++)
 	{
 		if (s[i] == accept[k])
 		{
-			j++;
-			/*continue to the outer loop*/
+			j = 1;
 			break;
 		}
 	}
+	if (!j)
+		break;
 }
-return (j);
+return (i);
 }
