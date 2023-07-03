@@ -6,26 +6,15 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-unsigned int i;
-unsigned int j;
 unsigned int k;
 
-for (i = 0; s[i] != '\0'; i++)
+for (s = 0; *s; s++)
 {
-	j = 0;
-	for (k = 0; accept[k] != '\0'; k++)
+	for (k = 0; accept[k]; k++)
 	{
-		if (s[i] == accept[k])
-		{
-			j = 1;
-			break;
-		}
+		if (*s == accept[k])
+			return (s);
 	}
-	if (j)
-		break;
 }
-if (j)
-	return (s[i]);
-else
-	return (0);
+return ('\0');
 }
