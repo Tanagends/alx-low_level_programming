@@ -6,10 +6,11 @@
  */
 int _sqrt_recursion(int n)
 {
-	int k = n ** 0.5;
+	float k = n ** 0.5;
+	int b = (int) k;
 
-	if (n < 0 || k * k != n)
+	if (n < 0 || b * b != n)
 		return (-1);
-	if (n >= 0 && k * k == n)
+	if (n >= 0 && b * b == n)
 		return (k);
 }
