@@ -4,13 +4,17 @@
  * @n: the number.
  * Return: result.
  */
+
+int b = 0;
+
 int _sqrt_recursion(int n)
 {
-	double k = n ** 0.5;
-	int b = (int) k;
+	b++;
 
-	if (n < 0 || b * b != n)
+	if (n < 0 && b * b > n)
 		return (-1);
-	if (n >= 0 && b * b == n)
-		return (k);
+	if (b * b = n)
+		return (b);
+	return(n);
+
 }
