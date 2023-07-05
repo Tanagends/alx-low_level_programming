@@ -13,7 +13,7 @@ int _sqrt_recursion(int n)
 
 	if (n < 0 && b * b > n)
 		return (-1);
-	if (b * b = n)
+	if (b * b == n)
 		return (b);
 	return(n);
 
