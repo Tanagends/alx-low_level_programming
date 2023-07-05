@@ -6,7 +6,7 @@
  */
 int _sqrt_recursion(int n)
 {
-	float k = n ** 0.5;
+	double k = n ** 0.5;
 	int b = (int) k;
 
 	if (n < 0 || b * b != n)
