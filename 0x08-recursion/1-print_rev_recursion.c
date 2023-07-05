@@ -7,7 +7,7 @@
 void _print_rev_recursion(char *s)
 {
 	size_t i = strlen(s);
-	char *p == s;
+	char *p = s;
 
 	if (p == s)
 	{
@@ -16,5 +16,5 @@ void _print_rev_recursion(char *s)
 	}
 	p = p + i - 1;
 	putchar(*p);
-	_puts_recursion(p - 1);
+	_print_rev_recursion(p - 1);
 }
