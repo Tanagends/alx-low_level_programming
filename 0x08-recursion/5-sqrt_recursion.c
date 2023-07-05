@@ -15,6 +15,7 @@ int _sqrt_recursion(int n)
  * actual_sqrt - computes sqrt.
  * @n: number.
  * @i: iteration.
+ * Return: sqrt.
  */
 int actual_sqrt(int n, int i)
 {
