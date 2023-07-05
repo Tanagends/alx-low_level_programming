@@ -6,16 +6,8 @@
  */
 void _print_rev_recursion(char *s)
 {
-	size_t i = strlen(s);
-	char *p = s;
-
-	p = p + i - 1;
-	if (p == s)
-	{
-		putchar('\0');
+	if (*s == '\0')
 		return;
-	}
-	p = p + i - 1;
-	putchar(*p);
-	_print_rev_recursion(p - 1);
+	_print_rev_recursion(s + 1);
+	putchar (*s);
 }
