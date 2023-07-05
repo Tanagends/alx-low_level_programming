@@ -21,5 +21,5 @@ int actual_sqrt(int n, int i)
 		return (-1);
 	if (i * i == n)
 		return (i);
-	return (actual_sqrt(n, i + 1);
+	return (actual_sqrt(n, i + 1));
 }
