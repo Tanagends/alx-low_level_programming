@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- * _puts_recursion - prints a string.
- * @s: the string.
+ * _puts_recursion - computes the facytorial of a number.
+ * @n: the number.
+ * Return: factorial of the number.
  */
 int factorial(int n)
 {
