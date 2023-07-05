@@ -4,17 +4,22 @@
  * @n: the number.
  * Return: result.
  */
-
-int b = 0;
-
 int _sqrt_recursion(int n)
 {
-	b++;
-
-	if (n < 0 || b * b > n)
+	if (n < 0)
 		return (-1);
-	if (b * b == n)
-		return (b);
-	return(n);
-
+	return (actual_sqrt(n, 0));
+}
+/**
+ * actual_sqrt - computes sqrt.
+ * @n: number.
+ * @i: iteration.
+ */
+int actual_sqrt(int n, int i)
+{
+	if (i * i > n)
+		return (-1);
+	if (i * i == n)
+		return (i);
+	return (actual_sqrt(n, i + 1);
 }
