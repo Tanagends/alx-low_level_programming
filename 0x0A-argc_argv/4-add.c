@@ -11,9 +11,6 @@ int main(int argc, char *argv[])
 	int sum = 0;
 	int i = 1;
 
-	if (argc == 1)
-		printf("0\n");
-	
 	for (; i < argc; i++)
 	{
 		if (atoi(argv[i]) == 0 && **(argv + i) != '0')
