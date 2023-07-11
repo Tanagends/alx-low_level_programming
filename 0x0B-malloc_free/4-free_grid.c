@@ -1,10 +1,9 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- * *alloc_grid - two dimensional integer array.
- * @width: columns.
+ * *free_grid - frees a two dimensional integer array.
+ * @grid: two dimensional integer array.
  * @height: rows.
- * Return: pointer to the copied string.
  */
 void free_grid(int **grid, int height)
 {
