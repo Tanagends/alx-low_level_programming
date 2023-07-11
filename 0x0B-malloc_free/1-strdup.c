@@ -17,7 +17,9 @@ char *_strdup(char *str)
 	if (!array)
 		return (NULL);
 	for (i = 0; k <= i; k++)
-		array[i] = str;
+	{
+		array[i] = *str;
 		str++;
+	}
 	return (array);
 }
