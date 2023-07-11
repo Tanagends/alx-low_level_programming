@@ -5,14 +5,13 @@
  * @str: the string.
  * Return: pointer to the copied string.
  */
-char *_strdup(char *str)
+
 {
 	char *array;
-	int i;
+	int i = strlen(str);
 	
 	if (str == NULL)
 		return (NULL);
-	i = strlen(str);
 	array = malloc(i + 1);
 	if (!array)
 		return (NULL);
