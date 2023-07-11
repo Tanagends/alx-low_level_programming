@@ -9,7 +9,6 @@ char *_strdup(char *str)
 {
 	char *array;
 	int i = strlen(str);
-	int k;
 
 	if (str == NULL)
 		return (NULL);
