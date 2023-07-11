@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdlib.h>
 /**
  * *_strdup - copies a string into a newly allocated memory.
  * @str: the string.
