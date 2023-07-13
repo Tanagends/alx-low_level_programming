@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 /**
  * _calloc - allocates memory.
  * @nmemb: element count.
@@ -18,3 +17,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	memset(a, 0, size * nmemb);
 	return (a);
 }
+/**
+ * memset - 
+ *

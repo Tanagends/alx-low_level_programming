@@ -11,25 +11,26 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *a;
 	unsigned int k = 0;
-	char *trunc_str;
 	unsigned int i = 0;
+	unsigned int m = 0;
+	unsigned int b = 0;
 
 	trunc_str = malloc((n + 1) * sizeof(char));
 	if (trunc_str == NULL)
 		exit(0);
-	if (s1 != NULL)
-		i = strlen(s1);
-	if (s2 != NULL)
-		k = strlen(s2);
+	while (s1 && s1[i])
+		i++;
+	while (s2 && s2[k])
+		k++;
 	if (n >= k)
 		n = k;
 	a = malloc((i + n + 1) * sizeof(char));
 	if (a == NULL)
 		exit(0);
-	strcpy(a, s1);
-	strncpy(trunc_str, s2, n);
-	trunc_str[n] = '\0';
-	strcat(a, trunc_str);
-	free(trunc_str);
+	for (m = 0; m < i; m++)
+		a[m] = s1[m];
+	while (b < n)
+		a[m++] = s2[b++]
+	a[m] = '\0';
 	return (a);
 }
