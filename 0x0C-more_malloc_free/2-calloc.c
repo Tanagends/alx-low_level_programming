@@ -23,14 +23,12 @@ char *_memset(char *p, char c, unsigned int l)
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *a;
-	unsigned int len;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	len = size * nmemb;
-	a = malloc(len);
+	a = malloc(size * nmemb);
 	if (a == NULL)
 		return (NULL);
-	_memset(a, 0, len);
+	_memset(a, 0, size * nmemb);
 	return (a);
 }
