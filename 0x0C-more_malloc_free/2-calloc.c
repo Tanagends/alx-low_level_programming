@@ -3,7 +3,7 @@
  * _memset - sets memory.
  * @c: char to be set.
  * @p: string to be set.
- * @len: setting length.
+ * @l: setting length.
  * Return: set string.
  */
 char *_memset(char *p, char c, unsigned int l)
