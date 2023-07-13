@@ -12,7 +12,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *a;
 	int i = 0;
 	int k = 0;
-	int j;
 	char trunc_str[n + 1];
 
 	if (n >= strlen(s2))
