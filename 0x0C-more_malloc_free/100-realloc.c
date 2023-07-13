@@ -17,9 +17,10 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	return (dest);
 }
 /**
- * _calloc - allocates memory.
- * @nmemb: element count.
- * @size: element size.
+ * _realloc - allocates memory.
+ * @old_size: old element count.
+ * @new_size: new element count.
+ * @ptr: old pointer.
  * Return: pointer to allocated memory.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
