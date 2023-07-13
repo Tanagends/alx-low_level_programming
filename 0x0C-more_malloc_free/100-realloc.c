@@ -1,5 +1,22 @@
 #include <stdlib.h>
 /**
+ * _memcpy - copies memory area.
+ *@src: source memory.
+ *@dest: destination memory.
+ *@n: number of bytes to be copied.
+ *Return: pointer to memory dest.
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		dest[i] = src[i];
+	}
+	return (dest);
+}
+/**
  * _calloc - allocates memory.
  * @nmemb: element count.
  * @size: element size.
@@ -24,21 +41,4 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	_memcpy(a, ptr, old_size < new_size ? old_size : new_size);
 	free(ptr);
 	return (a);
-}
-/**
- * _memcpy - copies memory area.
- *@src: source memory.
- *@dest: destination memory.
- *@n: number of bytes to be copied.
- *Return: pointer to memory dest.
- */
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int i;
-
-	for (i = 0; i < n; i++)
-	{
-		dest[i] = src[i];
-	}
-	return (dest);
 }
