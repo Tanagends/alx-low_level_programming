@@ -6,7 +6,7 @@
  * @len: setting length.
  * Return: set string.
  */
-char *memsett(char *p, char c, unsigned int len)
+char *_memset(char *p, char c, unsigned int len)
 {
 	unsigned int i = 0;
 
@@ -23,7 +23,6 @@ char *memsett(char *p, char c, unsigned int len)
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *a;
-	unsigned int b = 0;
 	unsigned int len;
 
 	if (nmemb == 0 || size == 0)
@@ -32,6 +31,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	a = malloc(len);
 	if (a == NULL)
 		exit(0);
-	memsett(a, 0, len);
+	_memset(a, 0, len);
 	return (a);
 }
