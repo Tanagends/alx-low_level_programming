@@ -1,6 +1,6 @@
 #include <stdlib.h>
 /**
- * memset - sets memory.
+ * _memset - sets memory.
  * @c: char to be set.
  * @p: string to be set.
  * @len: setting length.
