@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <string.h> 
+#include <string.h>
 /**
  * _calloc - allocates memory.
  * @nmemb: element count.
