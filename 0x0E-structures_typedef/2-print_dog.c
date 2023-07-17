@@ -1,4 +1,6 @@
-
+#include <stdio.h>
+#include <stdlib.h>
+#include "dog.h"
 /**
  * print_dog - dog profile.
  * @d: dog struct.
