@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "3-calc.h"
 /**
  * get_op_func - gets the right operational function.
  * @s: the arithmetic operator.
@@ -18,9 +19,8 @@ int (*get_op_func(char *s))(int, int)
 
 	for (i = 0; i < 5; i++)
 	{
-		if (op_t ops[i][0] == s)
-			return (int (*(op_t ops[i][1]))(int, int));
+		if (*ops[i].op == *s)
+			return (ops[i].f);
 	}
 	return (NULL);
 }
-
