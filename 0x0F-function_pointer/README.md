@@ -1,3 +1,2 @@
-These are tasks on function pointers.
-All my tasks are in here.
-welcome, and have a nice look around.
+Hello, reader.
+Welcome to function pointers.
