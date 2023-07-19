@@ -1,11 +1,16 @@
 #include "function_pointers.h"
 /**
- * print_name - prints a name.
- * @name: the name.
- * @f: function printing a name in a certain way.
+ * array_iterator - prints array elements.
+ * @array: the array.
+ * @action: function printing a name in a certain way.
+ * @size: number of elements.
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	if (
-	f(name);
+	size_t i;
+
+	if (array == NULL || action == NULL)
+		return;
+	for (i = 0; i < size; i++)
+		action(array[i]);
 }
