@@ -5,7 +5,7 @@
  * @array: the array.
  * @size: array size.
  * @cmp: function which compares values.
- * @Return: index of first similar element.
+ * Return: similar element index.
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
