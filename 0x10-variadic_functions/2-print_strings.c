@@ -10,10 +10,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list intPrint;
 	unsigned int i = 0;
+	char *str;
 
 	va_start(intPrint, n);
 	for (i = 0; i < n; i++)
 	{
+		str = va_arg(intPrint, char *);
 		if (va_arg(intPrint, char *) == NULL)
 			printf("nil");
 		else
