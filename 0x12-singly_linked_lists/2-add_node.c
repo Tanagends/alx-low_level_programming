@@ -12,14 +12,14 @@ list_t *add_node(list_t **head, const char *str)
 
 	ptr = malloc(sizeof(list_t));
 	if (ptr == NULL)
-		exit(EXIT_FAILURE);
+		return (NULL);
 	while (str[i++] != '\0')
 		;
 	ptr->str = strdup(str);
 	if (ptr->str == NULL)
 	{
 		free(ptr);
-		exit(EXIT_FAILURE);
+		return (NULL);
 	}
 	ptr->len = i - 1;
 	ptr->next = *head;
