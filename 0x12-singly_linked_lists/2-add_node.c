@@ -1,9 +1,10 @@
 #include "lists.h"
 #include <string.h>
 /**
- * list_len - counts elements of a list.
- * @h: initial node.
- * Return: node count.
+ * add_node - adds node to a list.
+ * @head: initial node pointer pointer.
+ * @str: string data.
+ * Return: added node pointer.
  */
 list_t *add_node(list_t **head, const char *str)
 {
