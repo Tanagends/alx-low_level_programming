@@ -24,9 +24,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	ptr->len = i - 1;
 	ptr->next = NULL;
-	p = *head;
-	while (p->next != NULL)
-		p = p->next;
-	p->next = ptr;
+	if (*head == NULL)
+		*head = ptr;
+	else
+	{
+		p = *head;
+		while (p->next != NULL)
+			p = p->next;
+		p->next = ptr;
+	}
 	return (ptr);
 }
