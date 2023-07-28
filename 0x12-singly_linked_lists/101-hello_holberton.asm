@@ -7,10 +7,10 @@ section .text
 
 _start:
 	; Write the message to stdout
-	mov rax, 1       ; system call number for write
-	mov rdi, 1       ; file descriptor for stdout
-	mov rsi, message ; address of message
-	mov rdx, message_len ; length of message
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, message
+	mov rdx, message_len
 	syscall
 
 	; Exit the program with status code 0
