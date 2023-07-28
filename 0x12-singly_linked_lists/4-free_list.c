@@ -1,10 +1,8 @@
 #include "lists.h"
 #include <string.h>
 /**
- * add_node - adds node to a list.
+ * free_list - frees a list.
  * @head: initial node pointer pointer.
- * @str: string data.
- * Return: added node pointer.
  */
 void free_list(list_t *head)
 {
