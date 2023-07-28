@@ -1,16 +1,17 @@
 section .data
-	message db 'Hello, Holberton', 0
-	format db '%s', 10, 0
+	message db 'Hello, Holberton', 10
+	message_len equ $ - message
 
 section .text
 	global _start
 
 _start:
-	; Call printf with the message and format string
-	mov rdi, format
-	mov rsi, message
-	xor rax, rax
-	call printf
+	; Write the message to stdout
+	mov rax, 1       ; system call number for write
+	mov rdi, 1       ; file descriptor for stdout
+	mov rsi, message ; address of message
+	mov rdx, message_len ; length of message
+	syscall
 
 	; Exit the program with status code 0
 	mov rax, 60
