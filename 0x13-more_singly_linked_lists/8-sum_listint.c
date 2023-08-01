@@ -2,7 +2,7 @@
 /**
  * sum_listint - sums listint_t list.
  * @head: pointer to head.
- * Rturn: sum.
+ * Return: sum.
  */
 int sum_listint(listint_t *head)
 {
