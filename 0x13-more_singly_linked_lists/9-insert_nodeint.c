@@ -31,7 +31,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			return (NULL);
 		}
 	}
-	prev->next =newNode;
 	newNode->next = ptr;
+	prev->next = newNode;
 	return (newNode);
 }
