@@ -14,4 +14,5 @@ void free_listint2(listint_t **head)
 		headPtr = headPtr->next;
 		free(ptr);
 	}
+	*head = NULL;
 }
