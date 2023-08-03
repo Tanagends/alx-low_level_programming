@@ -8,7 +8,7 @@ int get_endianness(void)
 	unsigned long char *ptr;
 	unsigned long int hex = 0x1234;
 
-	ptr = &hex;
+	ptr = (unsigned char *)&hex;
 	if (*ptr > *(ptr++))
 		return (1);
 	else
