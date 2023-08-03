@@ -4,7 +4,7 @@
  * get_bit - gets decimal's binary index value.
  * @n: decimal.
  * @index: position.
- * return: index value.
+ * Return: index value.
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
