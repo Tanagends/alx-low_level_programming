@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * get_bit - gets decimal's binary index value.
  * @n: decimal.
