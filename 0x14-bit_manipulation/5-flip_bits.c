@@ -9,17 +9,13 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int flip, mask, count = 0;
 
-	if (m >= n)
-		flip = m - n;
-	else
-		flip = n - m;
+	flip = m ^ n;
 
-	mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
-	while (mask)
+	while (flip)
 	{
-		if ((mask & flip) != 0)
+		if ((flip & 1) != 0)
 			count++;
-		mask >>= 1;
+		flip >>= 1;
 	}
 	return (count);
 }
