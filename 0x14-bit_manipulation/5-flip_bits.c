@@ -17,7 +17,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
 	while (mask)
 	{
-		if (mask & flip != 0)
+		if ((mask & flip) != 0)
 			count++;
 		mask >>= 1;
 	}
