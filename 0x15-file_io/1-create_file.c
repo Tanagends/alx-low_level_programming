@@ -21,8 +21,8 @@ int create_file(const char *filename, char *text_content)
 		return (1);
 	for (count = 0; text_content[count]; count++)
 		;
-	write(file_descriptor, text_content, count);
-	if (writecount == -1)
+	count = write(file_descriptor, text_content, count);
+	if (count == -1)
 	{
 		close(file_descriptor);
 		return (-1);
