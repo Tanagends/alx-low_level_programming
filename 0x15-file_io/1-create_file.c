@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * create_file - creates file and prints to stdoutput.
+ * create_file - creates file.
  * @filename: file.
  * @text_content: count.
  *
- * Return: printed letters count.
+ * Return: 1 (Success).
  */
 int create_file(const char *filename, char *text_content)
 {
@@ -16,12 +16,12 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	file_descriptor = open(filename, O_CREAT, 0600);
 	if (file_descriptor == -1)
-		return (0);
+		return (-1);
 	if (text_content == NULL)
 		return (1);
 	for (count = 0; text_content[count]; count++)
 		;
-	writecount = write(file_descriptor, text_content, count);
+	writecount = write(file_descriptor, text_content, count + 1);
 	if (writecount == -1)
 	{
 		close(file_descriptor);
