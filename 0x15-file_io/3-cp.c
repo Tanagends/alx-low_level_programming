@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 {
 	char buffer[1024] = "";
 	int fdfrom, fdto, fro, to;
-	ssize_t readd, writ;
+	ssize_t readd = 1024, writ;
 
 	if (argc != 3)
 		prnt_error();
@@ -72,12 +72,15 @@ int main(int argc, char *argv[])
 	if (fdfrom == -1)
 		err98(argv[1]);
 	fdto = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	readd = read(fdfrom, buffer, 1024);
-	if (readd == -1)
-		err98(argv[1]);
-	writ = write(fdto, buffer, readd);
-	if (writ == -1)
-		err99(argv[2], fdfrom, fdto);
+	while (readd == 1024)
+	{
+		readd = read(fdfrom, buffer, 1024);
+		if (readd == -1)
+			err98(argv[1]);
+		writ = write(fdto, buffer, readd);
+		if (writ == -1 || writ != readd)
+			err99(argv[2], fdfrom, fdto);
+	}
 	fro = close(fdfrom);
 	err100(fro, fdfrom);
 	to = close(fdto);
