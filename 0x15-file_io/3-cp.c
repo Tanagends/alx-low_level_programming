@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdbool.h>
-void prnt_error(int i, char *errtxt, int ex);
+void prnt_error(void);
 void err98(char *filename);
 void err99(char *filename, int fdfrom, int fdto);
 void err100(int i, int fd);
@@ -11,10 +11,10 @@ void err100(int i, int fd);
  * @errtxt: error message.
  * @ex: exit status.
  */
-void prnt_error(int i, char *errtxt, int ex)
+void prnt_error(void)
 {
-	dprintf(i, errtxt);
-	exit(ex);
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	exit(97);
 }
 /**
  * err98 - exits if file from is absent or unreadable.
@@ -67,14 +67,14 @@ int main(int argc, char *argv[])
 	ssize_t readd, writ;
 
 	if (argc != 3)
-		prnt_error(STDERR_FILENO, "Usage: cp file_from file_to\n", 97);
+		prnt_error();
 	fdfrom = open(argv[1], O_RDONLY);
 	if (fdfrom == -1)
 		err98(argv[1]);
 	fdto = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	readd = read(fdfrom, buffer, 1024);
 	if (readd == -1)
-		err99(argv[1]);
+		err98(argv[1]);
 	writ = write(fdto, buffer, readd);
 	if (writ == -1)
 		err99(argv[2], fdfrom, fdto);
