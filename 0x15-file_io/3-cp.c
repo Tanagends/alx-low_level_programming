@@ -7,9 +7,6 @@ void err100(int i, int fd);
 
 /**
  * prnt_error - prints error
- * @i: fd for error output.
- * @errtxt: error message.
- * @ex: exit status.
  */
 void prnt_error(void)
 {
