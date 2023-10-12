@@ -6,44 +6,39 @@
  *
  * Return: 1 (if success otherwise -1)
  */
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+nt delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *copy, *tmp, *before = NULL;
-	unsigned int i;
-
 	if (!head || !(*head))
-		return (-1);
-	copy = *head;
-	if (index == 0)
-	for (i = 0; i < index; i++)
-	{
-		if (copy)
-		{
-			before = copy;
-			copy = copy->next;
-		}
-		else
-			return (-1);
-	}
-	if (!copy)
-		return (-1);
-	tmp = copy;
-	if (!(copy->next))
-	{
-		if (before)
-			before->next = NULL;
-	}
-	else
-	{
-		copy->next->prev = before;
-		copy = copy->next;
-	}
+	r	eturn (-1);
+
+	dlistint_t *current = *head;
+
 	if (index == 0)
 	{
-		*head = before;
-		if (before)
-			before->prev = NULL;
+	/* Special case: deleting the first node */
+		*head = current->next;
+		if (*head)
+		    (*head)->prev = NULL;
+		free(current);
+		return (1);
 	}
-	free(tmp);
+
+	unsigned int i;
+	for (i = 0; i < index && current; i++)
+	{
+	/* Traverse to the desired index or the end of the list */
+		current = current->next;
+	}
+
+	if (!current)
+		return (-1);
+
+	if (current->prev)
+		current->prev->next = current->next;
+
+	if (current->next)
+		current->next->prev = current->prev;
+
+	free(current);
 	return (1);
 }
