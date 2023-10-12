@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * get_dnodeint_at_index - retrieves a node at an index.
  * @head: head pointer.

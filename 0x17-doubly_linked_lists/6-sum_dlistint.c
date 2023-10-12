@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * sum_dlistint - sums up a doubly linked integer list.
  * @head: the lits's head.

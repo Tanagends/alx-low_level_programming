@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
+#include "lists.h"
 /**
  * add_dnodeint_end - appends node
  * @head: doubly linked list head
@@ -14,10 +12,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	dlistint_t *new = malloc(sizeof(dlistint_t));
 
 	if (!new)
-	{
-		dprintf(STDERR_FILENO, "Could not malloc");
 		return (NULL);
-	}
+
 	new->n = n;
 	new->previous = NULL;
 	new->next = NULL;

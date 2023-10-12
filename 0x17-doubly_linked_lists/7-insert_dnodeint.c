@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "lists.h"
 /**
  * insert_dnodeint_at_index - inserts node into a doubly linked list.
  * @h: pointer to head pointer.

@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "lists.h"
 /**
  * dlistint_len - counts elements of a doubly linked list
  * @h: head
