@@ -31,7 +31,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new->next = copy;
 	new->prev = idx == 0 ? NULL : copy->prev;
 	if (new->prev)
-		copy->previous->next = new;
+		copy->prev->next = new;
 	else
 		*h = new;
 	if (copy)
