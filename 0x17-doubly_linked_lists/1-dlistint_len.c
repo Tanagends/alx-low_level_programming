@@ -7,8 +7,8 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t count = 0, i;
-	dlistint_t *head;
+	size_t count = 0;
+	const dlistint_t *head;
 
 	if (!h)
 		return (0);

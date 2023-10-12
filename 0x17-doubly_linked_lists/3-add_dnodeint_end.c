@@ -15,7 +15,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		return (NULL);
 
 	new->n = n;
-	new->previous = NULL;
+	new->prev = NULL;
 	new->next = NULL;
 	if (head == NULL)
 	{
@@ -32,7 +32,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	while (copy->next)
 		copy = copy->next;
 	copy->next = new;
-	new->previous = copy;
+	new->prev = copy;
 
 	return (new);
 }
