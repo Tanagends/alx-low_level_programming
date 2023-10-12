@@ -9,7 +9,7 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *copy, *new, *copyy;
+	dlistint_t *copy, *new, *tmp;
 	unsigned int i;
 
 	if (!h || ((*h) == NULL && idx != 0))
@@ -20,6 +20,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		if (!copy)
 			return (NULL);
+		tmp = copy;
 		copy = copy->next;
 	}
 
@@ -27,12 +28,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (!new)
 		return (NULL);
 
-	copyy = *h;
-	for ( ;copyy && copy->next; copyy = copyy->next)
-		;
 	new->n = n;
 	new->next = copy;
-	new->prev = idx == 0 ? NULL : (copy != NULL ? copy->prev : copyy);
+	new->prev = idx == 0 ? NULL : (copy != NULL ? copy->prev : tmp);
 	if (new->prev)
 		copy->prev->next = new;
 	else
