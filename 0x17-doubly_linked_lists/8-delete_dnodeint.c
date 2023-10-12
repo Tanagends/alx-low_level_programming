@@ -6,12 +6,13 @@
  *
  * Return: 1 (if success otherwise -1)
  */
-nt delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	if (!head || !(*head))
-	r	eturn (-1);
-
 	dlistint_t *current = *head;
+	unsigned int i;
+
+	if (!head || !(*head))
+		return (-1);
 
 	if (index == 0)
 	{
@@ -23,7 +24,6 @@ nt delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 
-	unsigned int i;
 	for (i = 0; i < index && current; i++)
 	{
 	/* Traverse to the desired index or the end of the list */
