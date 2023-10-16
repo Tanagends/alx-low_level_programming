@@ -9,10 +9,10 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *copy, new;
-	int i;
+	dlistint_t *copy, *new, *tmp;
+	unsigned int i;
 
-	if (!h)
+	if (!h || ((*h) == NULL && idx != 0))
 		return (NULL);
 
 	copy = *h;
@@ -20,23 +20,22 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		if (!copy)
 			return (NULL);
+		tmp = copy;
 		copy = copy->next;
 	}
 
 	new = malloc(sizeof(dlistint_t));
 	if (!new)
-	{
-		dprintf(2, "Can't malloc");
 		return (NULL);
-	}
+
 	new->n = n;
 	new->next = copy;
-	if (idx == 0)
-		new->previous = NULL;
+	new->prev = idx == 0 ? NULL : tmp;
+	if (new->prev)
+		tmp->next = new;
 	else
-		new->previous = copy->previous;
-	copy->previous = new;
-	copy = new;
-
+		*h = new;
+	if (copy)
+		copy->prev = new;
 	return (new);
 }
