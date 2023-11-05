@@ -1,1 +1,1 @@
-0x1A. C - Hash tables
+Hash Tables in C programming language
