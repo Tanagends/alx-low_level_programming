@@ -22,6 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!element)
 		return (0);
 	strcat(key_cpy, key);
+	strcat(value_cpy, value);
 
 	element->key = (char *)key_cpy;
 	element->value = (char *)value_cpy;
