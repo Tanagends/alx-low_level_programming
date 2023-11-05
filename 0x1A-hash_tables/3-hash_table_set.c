@@ -14,16 +14,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int i;
 	hash_node_t *element;
-	/*char *key_cpy = "", *value_cpy = "";*/
+	char *key_cpy = "", *value_cpy = "";
 
 	if (!key || !ht)
 		return (0);
 	element = malloc(sizeof(hash_node_t));
 	if (!element)
 		return (0);
+	strcat(key_cpy, key);
 
-	strcpy(element->key, (char *)key);
-	strcpy(element->value, (char *)value);
+	element->key = (char *)key_cpy;
+	element->value = (char *)value_cpy;
 
 	i = key_index((const unsigned char *)key, ht->size);
 
