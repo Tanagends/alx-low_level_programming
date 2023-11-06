@@ -21,8 +21,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	element = malloc(sizeof(hash_node_t));
 	if (!element)
 		return (0);
-	element->key = strdup((char *)key_cpy;)
-	element->value = strdup((char *)value_cpy;)
+	element->key = strdup((char *)key);
+	element->value = strdup((char *)value);
 
 	i = key_index((const unsigned char *)key, ht->size);
 	if (ht->array[i])
