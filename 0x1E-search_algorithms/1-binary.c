@@ -1,47 +1,35 @@
 #include "search_algos.h"
 
 /**
- * binary_search - searches an array value using binary search
- * @array: pointer to the first element of the array to be searched.
- * @size: array size.
- * @value: value to be searched
+ * binary_search - Performs binary search.
+ * @array: The integer array.
+ * @size: The size of the array.
+ * @value: The value to search for.
  *
- * Return: the index of the value
+ * Return: The index found or -1 if not found.
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int *sub_array = array;
-	size_t i, k; pos = size/2;
+	size_t i = 0;
+	int *a = array;
 
-	if (!array) /* || ((size == 1) && (array[0] != value)))*/
+	if (!array)
 		return (-1);
-	
-	for (i = size; i > 1; i/2)
-	{
-		printf("Searching in array: ");
 
-		for (k = 0; k < i; k++)
-		{
-			if (k != i - 1)
-				printf("%i, ", sub_array[k]);
-			else
-				printf("%i\n", sub_array[k]);
-		}
- 
-		if (sub_array[i/2] == value)
-			return (pos);
-		else if (sub_array[pos] < value)
-		{
-			sub_array++;
-			pos += i/2;
-		}
+	while (size)
+	{
+		for (i = 0, printf("Searching in array: "); i < size; i++)
+			printf("%d%s", a[i], i + 1 == size ? "\n" : ", ");
+
+		i = (size - 1) / 2;
+		if (a[i] == value)
+			return ((a - array) + i);
+		else if (a[i] > value)
+			size = i;
 		else
 		{
-			if (i % 2)
-				sub_array -= (i/2 + 1);
-			else
-				sub_array -= i/2;
-			pos -= i/4;
+			a += (i + 1);
+			size -= (i + 1);
 		}
 	}
 	return (-1);
